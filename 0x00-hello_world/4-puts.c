@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c puts.c -o puts
+gcc -Wall -g puts.c -o puts
