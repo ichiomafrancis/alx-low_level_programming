@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
  * main - Entry point
@@ -9,16 +10,14 @@
  */
 int main(void)
 {
-	char ch;
+	int ch;
 
-	ch = a;
-	while (ch <= 'z';)
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
 		putchar(ch);
-		ch++;
 	}
 
-	putchar("\n");
+	putchar('\n');
 
 	return (0);
 }
