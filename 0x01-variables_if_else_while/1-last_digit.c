@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - Enter from here
+ * main - Entry point
  *
  * Print the last digit of the number stored in the variable n
  *
@@ -24,7 +24,7 @@ int main(void)
 	else if (digit == 0)
 		printf("Last digit of %d is %d and is 0\n", n, digit);
 
-	else if (digit < 6 and digit != 0)
+	else if ((digit < 6)and(digit != 0))
 		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, digit);
 
 	return (0);
