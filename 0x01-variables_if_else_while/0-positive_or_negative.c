@@ -7,7 +7,7 @@
  *
  * Print number stored in variable n - Positive or Negative
  *
- * Return = 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
