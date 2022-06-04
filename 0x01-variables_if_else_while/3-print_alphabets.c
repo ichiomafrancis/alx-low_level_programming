@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <string.h>
 
 /**
- * main - Entry point
+ * main - Entry from here
  *
- * Prints the alphabet in lowercase
+ * Prints the alphabet in lowercase and then in upper case,
+ *followed by a new line.
  *
  * Return: Always 0 (Success)
  */
@@ -16,9 +16,11 @@ int main(void)
 	{
 		putchar(ch);
 	}
+		for (ch = 'A'; ch <= 'Z'; ch++)
+		{
+			putchar(ch);
+		}
 
 	putchar('\n');
-
 	return (0);
 }
-
