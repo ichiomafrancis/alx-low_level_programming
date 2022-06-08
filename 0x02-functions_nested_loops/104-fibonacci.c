@@ -1,34 +1,51 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Prints the first 98 Fibonacci numbers, starting with
+ *        1 and 2, separated by a comma followed by a space.
  *
- * Prints the first 50 Fibonacci numbers, starting with 1 and 2
- *followed by a new line
- *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
 int main(void)
 {
 	int n;
-	float a = 0, b = 1, sum;
+	unsigned long fiba = 0, fibb = 1, sum;
+	unsigned long fiba_half1, fiba_half2, fibb_half1, fibb_half2;
+	unsigned long half1, half2;
 
-	for (n = 0; n < 98; n++)
+	for (n = 0; n < 92; n++)
 	{
-		sum = a + b;
-		printf("%.0f", sum);
+		sum = fiba + fibb;
+		printf("%lu, ", sum);
 
-		if (n == 97)
+		fiba = fibb;
+		fibb = sum;
+	}
+	fiba_half1 = fiba / 10000000000;
+	fibb_half1 = fibb / 10000000000;
+	fiba_half2 = fiba % 10000000000;
+	fibb_half2 = fibb % 10000000000;
+
+	for (n = 93; n < 99; n++)
+	{
+		half1 = fiba_half1 + fibb_half1;
+		half2 = fiba_half2 + fibb_half2;
+		if (half2 > 9999999999)
+		{
+			half1 = half1 + 1;
+			half2 = half2 % 10000000000;
+		}
+		printf("%lu%lu", half1, half2);
+		if (n == 98)
 			continue;
 
-		printf(",");
-		printf(" ");
+		printf(", ");
 
-		a = b;
-		b = sum;
+		fiba_half1 = fibb_half1;
+		fiba_half2 = fibb_half2;
+		fibb_half1 = half1;
+		fibb_half2 = half2;
 	}
-
 	printf("\n");
-
 	return (0);
 }
