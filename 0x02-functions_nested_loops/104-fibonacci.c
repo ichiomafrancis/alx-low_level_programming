@@ -11,12 +11,12 @@
 int main(void)
 {
 	int n;
-	unsigned long a = 0, b = 1, sum;
+	float a = 0, b = 1, sum;
 
 	for (n = 0; n < 98; n++)
 	{
 		sum = a + b;
-		printf("%lu", sum);
+		printf("%.0f", sum);
 
 		if (n == 97)
 			continue;
