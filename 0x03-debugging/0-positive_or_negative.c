@@ -1,7 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-#include "main.h"
 
 /**
  * main - Entry point
@@ -10,7 +9,7 @@
  *
  * Return: Always 0 (Success)
  */
-void positive_or_negative(int n)
+int main(void)
 {
 	int n;
 
@@ -32,4 +31,3 @@ void positive_or_negative(int n)
 
 	return (0);
 }
-
