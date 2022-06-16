@@ -11,12 +11,21 @@
  */
 char *_strncopy(char *dest, char *src, int n)
 {
-	int i;
+	int i = 0;
+	int j = 0;
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
-		dest[i] = src[i];
-	for (; i < n; i++)
-		dest[i] = '\0';
+	while (i != n)
+	{
+		dest[j] = src[i];
+		j++;
+		i++;
+		if (src[i] == '\0')
+		{
+			break;
+		}
+	}
+	while (j != n)
+		dest[j++] = '\0';
 
 	return (dest);
 }
