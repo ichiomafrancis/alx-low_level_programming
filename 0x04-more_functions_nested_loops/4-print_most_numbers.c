@@ -4,7 +4,7 @@
  * print_most_numbers - a function that prints the
  * numbers, from 0 t0 9 except 2 and 4
  *
- * Restriction: I can only use _putchar twice 
+ * Restriction: I can only use _putchar twice
  */
 void print_most_numbers(void)
 {
@@ -12,7 +12,7 @@ void print_most_numbers(void)
 
 	for (i = 0; i <= 9; i++)
 	{
-		if ((i != 2) && (i != 4))
+		if ((i != 2) || (i != 4))
 			_putchar(i + '0');
 	}
 
